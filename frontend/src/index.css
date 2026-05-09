@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: dark; }
+body  { background: #0D1017; }
+
+::-webkit-scrollbar       { width: 6px; }
+::-webkit-scrollbar-track { background: #0D1017; }
+::-webkit-scrollbar-thumb { background: #6C63FF; border-radius: 3px; }
+
+.gradient-text {
+  background: linear-gradient(135deg, #6C63FF, #00D4FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.card-glow {
+  box-shadow: 0 0 30px rgba(108, 99, 255, 0.15);
+  transition: box-shadow 0.3s;
+}
+.card-glow:hover { box-shadow: 0 0 50px rgba(108, 99, 255, 0.3); }
+
+.btn-primary {
+  @apply bg-brand hover:bg-brand-dark text-white font-semibold px-6 py-3 rounded-xl
+         transition-all duration-200 flex items-center gap-2 disabled:opacity-50
+         disabled:cursor-not-allowed active:scale-95;
+}
